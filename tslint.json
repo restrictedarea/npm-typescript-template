@@ -2,10 +2,30 @@
 	"extends": "tslint:recommended",
 
 	"rules": {
+		"array-type": [true, "array"],
 		"callable-types": false,
 		"indent": [true, "tabs"],
 		"interface-name": [true, "never-prefix"],
 		"max-line-length": false,
+		"member-ordering": [true, {
+			"order": [
+				"private-static-field",
+				"protected-static-field",
+				"public-static-field",
+				"private-static-method",
+				"protected-static-method",
+				"public-static-method",
+				"private-instance-field",
+				"protected-instance-field",
+				"public-instance-field",
+				"private-constructor",
+				"protected-constructor",
+				"public-constructor",
+				"private-instance-method",
+				"protected-instance-method",
+				"public-instance-method"
+			]
+		}],
 		"newline-before-return": true,
 		"no-console": false,
 		"no-empty-interface": false,
@@ -15,10 +35,19 @@
 		"object-literal-key-quotes": [true, "consistent"],
 		"object-literal-sort-keys": false,
 		"only-arrow-functions": [true, "allow-declarations", "allow-named-functions"],
-		"ordered-imports": [true, {"import-sources-order": "any", "named-imports-order": "any"}],
+		"ordered-imports": [true, {
+			"import-sources-order": "any",
+			"named-imports-order": "any"
+		}],
 		"prefer-const": true,
 		"quotemark": [true, "double"],
-		"space-before-function-paren": [true, {"anonymous": "always", "asyncArrow": "always", "constructor": "never", "method": "never", "named": "never"}],
+		"space-before-function-paren": [true, {
+			"anonymous": "always",
+			"asyncArrow": "always",
+			"constructor": "never",
+			"method": "never",
+			"named": "never"
+		}],
 		"space-within-parens": 0
 	}
 }

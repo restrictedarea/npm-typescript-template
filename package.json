@@ -1,16 +1,28 @@
 {
 	"name": "@restrictedarea/npm-typescript-template",
-	"description": "",
 	"version": "0.0.0",
+	"description": "",
+	"keywords": [
+	],
+	"author": {
+		"name": "Anton Galtsev",
+		"email": "avgaltsev@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/restrictedarea/npm-typescript-template"
+	},
+	"license": "MIT",
+	"main": "index.js",
 	"scripts": {
-		"postversion": "git push --tags origin HEAD",
+		"lint": "tslint -e \"./**/*.d.ts\" \"./**/*.ts\"",
+		"build": "tsc --skipLibCheck",
 		"prepare": "npm run lint && npm run build",
-		"lint": "tslint -e \"*.d.ts\" \"*.ts\"",
-		"build": "tsc"
+		"postversion": "git push --tags origin HEAD"
 	},
 	"devDependencies": {
-		"@types/node": "^9.4.0",
-		"tslint": "^5.9.1",
-		"typescript": "^2.7.1"
+		"@types/node": "^12.12.14",
+		"tslint": "^5.20.1",
+		"typescript": "^3.7.3"
 	}
 }
