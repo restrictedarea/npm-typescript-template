@@ -10,10 +10,10 @@
 
 		"lib": [
 			"scripthost",
-			"es2018"
+			"es2020"
 		],
 
-		"noImplicitAny": true
+		"strict": true
 	},
 
 	"exclude": [

@@ -14,15 +14,19 @@
 	},
 	"license": "MIT",
 	"main": "index.js",
+	"directories": {
+		"lib": "./lib/",
+		"bin": "./bin/"
+	},
 	"scripts": {
 		"lint": "tslint -e \"./**/*.d.ts\" \"./**/*.ts\"",
 		"build": "tsc --skipLibCheck",
-		"prepare": "npm run lint && npm run build",
-		"postversion": "git push --tags origin HEAD"
+		"watch": "tsc --skipLibCheck --watch",
+		"prepare": "npm run lint && npm run build"
 	},
 	"devDependencies": {
-		"@types/node": "^12.12.14",
-		"tslint": "^5.20.1",
-		"typescript": "^3.7.3"
+		"@types/node": "^13.11.1",
+		"tslint": "^6.1.1",
+		"typescript": "^3.8.3"
 	}
 }
